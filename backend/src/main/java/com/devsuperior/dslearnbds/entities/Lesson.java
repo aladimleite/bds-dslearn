@@ -36,6 +36,7 @@ public abstract class Lesson implements Serializable {
 
     //0124 é pra falar qual aluno que já terminou cada aula
     //associação muitos para muitos entre ...
+    //uma aula (Lesson) terminada conhece as matrículas (enrollmentsDone) que a terminaram
     @ManyToMany
     @JoinTable(name = "tb_lessons_done",
     joinColumns = @JoinColumn(name = "lesson_id"),
